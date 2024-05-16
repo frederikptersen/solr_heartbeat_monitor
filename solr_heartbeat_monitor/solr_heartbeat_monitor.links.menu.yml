@@ -1,0 +1,6 @@
+solr_heartbeat_monitor.admin:
+  title: 'SOLR module settings'
+  description: 'example of how to make an admin settings page link'
+  parent: system.admin_config_development
+  route_name: solr_heartbeat_monitor.content
+  weight: 100

@@ -1,0 +1,3 @@
+$config =  \Drupal::config('custom.settings');  // get saved settings
+$types = $config->get('custom_types', array()); // fetch particular saved data "custom_types"
+print $types;

@@ -1,0 +1,9 @@
+name: SOLR Heartbeat Monitor
+type: module
+description: 'A module to monitor the status of the SOLR heartbeat monitor.'
+core_version_requirement: ^10
+confige: admin/config/services/solr
+configure: solr_heartbeat_monitor.admin_settings
+package: Custom
+dependencies:
+  - drupal:system

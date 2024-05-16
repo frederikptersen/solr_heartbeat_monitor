@@ -1,0 +1,30 @@
+<?php
+/**
+ * Implements hook_menu().
+ */
+function solr_heartbeat_monitor_menu() {
+  $items['admin/config/solr_heartbeat_monitor/config'] = array(
+    'title' => 'Custom Configuration',
+    'description' => 'Configure custom settings for Solr Heartbeat Monitor.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('solr_heartbeat_monitor_config_form'),
+    'access arguments' => array('administer site configuration'),
+  );
+  return $items;
+}
+
+/**
+ * Custom configuration form.
+ */
+function solr_heartbeat_monitor_config_form($form, &$form_state) {
+  $config = \Drupal::config('solr_heartbeat_monitor.settings');
+  $types = $config->get('custom_types', array());
+
+  // Display the value of the custom_types setting.
+  $form['custom_types'] = array(
+    '#markup' => '<p>' . t('Custom Types: @types', array('@types' => implode(', ', $types))) . '</p>',
+  );
+
+  return $form;
+}
+?>

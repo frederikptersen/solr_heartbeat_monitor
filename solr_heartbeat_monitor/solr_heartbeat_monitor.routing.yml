@@ -1,0 +1,31 @@
+solr_heartbeat_monitor.content:
+  path: '/solr_heartbeat_monitor'
+  defaults:
+    _controller: '\Drupal\solr_heartbeat_monitor\Controller\SolrController::content'
+    _title: 'SOLR heartbeat monitor'
+  requirements:
+    _permission: 'access content'
+
+frederik_bellcom.admin:
+  path: '/admin'
+  defaults:
+    _controller: '\Drupal\solr_heartbeat_monitor\Controller\SolrController::content'
+    _title: 'Admin Page'
+  requirements:
+    _permission: 'access content'
+
+frederik_bellcom.client:
+  path: '/client'
+  defaults:
+    _controller: '\Drupal\solr_heartbeat_monitor\Controller\SolrController::content'
+    _title: 'Client Page'
+  requirements:
+    _permission: 'access content'
+
+solr_heartbeat_monitor.settings_form:
+  path: '/admin/config/solr_heartbeat_monitor'
+  defaults:
+    _form: '\Drupal\solr_heartbeat_monitor\Form\SolrConfigForm'
+    _title: 'Solr Heartbeat Monitor Settings'
+  requirements:
+    _permission: 'administer site configuration'

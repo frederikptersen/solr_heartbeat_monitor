@@ -1,0 +1,4 @@
+'administer solr':
+  'title': 'Administer solr'
+  'description': 'Configure how solr is used on the site.'
+  restrict access: true
